@@ -1,5 +1,6 @@
 name: dev-teams
 version: 1.0.0
+apiVersion: v2
 dependencies:
 - name: team-blueprint
   version: "1.2.3"
