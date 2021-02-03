@@ -4,5 +4,5 @@ team-a:
   repos:
   - url: https://github.com/moolen/argo-team-a-app-1.git
     path: "env/dev/*"
-  - url: https://github.com/moolen/argo-team-a-app-2.git
-    path: "env/dev/*"
+    #  - url: https://github.com/moolen/argo-team-a-app-2.git
+    #path: "env/dev/*"
