@@ -1,0 +1,6 @@
+dependencies:
+- name: team-blueprint
+  repository: file://../team-blueprint
+  version: 1.2.3
+digest: sha256:bff1493d2710b180324380b50cf9c384e1e3971fb66ee853af0253ce61fed6c0
+generated: "2021-02-03T21:27:33.425382988+01:00"

@@ -1,0 +1,30 @@
+{{- if .Values.repos }}
+{{- $top := . -}}
+{{- range $index, $repo := .Values.repos }}
+{{- if $repo.url }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook
+spec:
+  generators:
+  - git:
+      repoURL: {{ $repo.url }}
+      directories:
+      - path: {{ $repo.path }}
+  template:
+    metadata:
+      name: {{ $top.name }}
+    spec:
+      project: {{ $top.project }}
+      source:
+        repoURL: {{ $repo.url }}
+        targetRevision: HEAD
+        path: '{{`{{ path }}`}}'
+      destination:
+        server: 'kubernetes.svc'
+        namespace: '{{ `{{ path.basename }}` }}' # defined by application
+{{- end }}
+{{- end }}
+{{- end }}
