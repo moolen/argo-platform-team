@@ -1,0 +1,6 @@
+dependencies:
+- name: team-blueprint
+  repository: file://../charts/team-blueprint
+  version: 1.2.3
+digest: sha256:e165a342ef5b7c63efa21b261525fd0ccab29876c98aaa9ac6d54db9bddaae48
+generated: "2021-02-03T21:59:48.085080521+01:00"

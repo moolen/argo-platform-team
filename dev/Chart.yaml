@@ -3,5 +3,5 @@ version: 1.0.0
 dependencies:
 - name: team-blueprint
   version: "1.2.3"
-  repository: "file://../team-blueprint"
+  repository: "file://../charts/team-blueprint"
   alias: team-a
