@@ -6,7 +6,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: {{ $top.name }}
+  name: {{ $top.Values.name }}
 spec:
   generators:
   - git:
@@ -15,9 +15,9 @@ spec:
       - path: {{ $repo.path }}
   template:
     metadata:
-      name: {{ $top.name }}
+      name: {{ $top.Values.name }}
     spec:
-      project: {{ $top.project }}
+      project: {{ $top.Values.project }}
       source:
         repoURL: {{ $repo.url }}
         targetRevision: HEAD
