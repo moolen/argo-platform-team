@@ -4,5 +4,14 @@ team-a:
   repos:
   - url: https://github.com/moolen/argo-team-a-app-1.git
     path: "env/dev/*"
-    #  - url: https://github.com/moolen/argo-team-a-app-2.git
-    #path: "env/dev/*"
+    ns_prefix: team-a-app1- # {team-a}-{app1}-{path.basename}
+  - url: https://github.com/moolen/argo-team-a-app-2.git
+    path: "env/dev/*"
+    ns_prefix: team-a-app2-
+
+# team-b:
+#   name: team-b
+#   project: team-b
+#   repos:
+#   - url: https://github.com/moolen/argo-team-b-app-1.git
+#     path: "env/dev/*"

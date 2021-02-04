@@ -25,7 +25,7 @@ spec:
         path: '{{`{{path}}`}}'
       destination:
         server: 'https://kubernetes.default.svc'
-        namespace: '{{ $top.Values.name }}-{{ `{{path.basename}}` }}' # defined by application
+        namespace: '{{$repo.ns_prefix}}-{{ `{{path.basename}}` }}' # defined by application
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
