@@ -11,6 +11,7 @@ spec:
   generators:
   - git:
       repoURL: {{ $repo.url }}
+      revision: main
       directories:
       - path: {{ $repo.path }}
   template:
@@ -20,7 +21,7 @@ spec:
       project: {{ $top.Values.project }}
       source:
         repoURL: {{ $repo.url }}
-        targetRevision: HEAD
+        targetRevision: main
         path: '{{`{{ path }}`}}'
       destination:
         server: 'kubernetes.svc'
