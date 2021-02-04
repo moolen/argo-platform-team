@@ -16,7 +16,7 @@ spec:
       - path: {{ $repo.path }}
   template:
     metadata:
-      name: '{{ $top.Values.name }}-{{ `{{path.basename}}` }}'
+      name: '{{ $top.Values.name }}-{{$index}}-{{ `{{path.basename}}` }}'
     spec:
       project: {{ $top.Values.project }}
       source:
