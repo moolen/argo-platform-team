@@ -24,7 +24,7 @@ spec:
         targetRevision: main
         path: '{{`{{path}}`}}'
       destination:
-        server: 'kubernetes.svc'
+        server: 'https://kubernetes.default.svc'
         namespace: argocd # '{{ `{{path.basename}}` }}' # defined by application
 {{- end }}
 {{- end }}
