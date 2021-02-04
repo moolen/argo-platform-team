@@ -22,10 +22,10 @@ spec:
       source:
         repoURL: {{ $repo.url }}
         targetRevision: main
-        path: '{{`{{ path }}`}}'
+        path: '{{`{{path}}`}}'
       destination:
         server: 'kubernetes.svc'
-        namespace: '{{ `{{ path.basename }}` }}' # defined by application
+        namespace: argocd # '{{ `{{path.basename}}` }}' # defined by application
 {{- end }}
 {{- end }}
 {{- end }}
